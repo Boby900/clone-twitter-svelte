@@ -1,10 +1,12 @@
 <script lang="ts">
-    import * as Avatar from "$lib/components/ui/avatar";
-  </script>
-   
-  <Avatar.Root>
-    <Avatar.Image src="https://github.com/shadcn.png" alt="@shadcn" />
-    <Avatar.Fallback>CN</Avatar.Fallback>
-  </Avatar.Root>
-<h1 class="text-3xl font-bold underline">Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+	import { enhance } from "$app/forms";
+	import type { PageData } from "./$types";
+
+	export let data: PageData;
+</script>
+
+<h1>Hi, {data.user.username}!</h1>
+<p>Your user ID is {data.user.id}.</p>
+<form method="post" use:enhance>
+	<button>Sign out</button>
+</form>
