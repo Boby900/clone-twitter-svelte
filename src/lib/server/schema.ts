@@ -16,6 +16,14 @@ export const sessionTable = pgTable("session", {
 		mode: "date"
 	}).notNull()
 });
+
+export const postTable = pgTable("post", {
+	
+	
+	content: text("content").notNull(),
+
+	
+});
 export interface DatabaseUser {
 	id: string;
 	username: string;
