@@ -1,4 +1,4 @@
-import { pgTable, text, timestamp } from "drizzle-orm/pg-core";
+import { pgTable, text, timestamp, integer } from "drizzle-orm/pg-core";
 
 export const userTable = pgTable("user", {
 	id: text("id").primaryKey(),
@@ -15,6 +15,16 @@ export const sessionTable = pgTable("session", {
 		withTimezone: true,
 		mode: "date"
 	}).notNull()
+});
+
+export const postTable = pgTable("post", {
+	
+	
+	content: text("content").notNull(),
+	likes: integer("likes").default(0),
+	imageUrl: text("imageUrl")
+
+	
 });
 export interface DatabaseUser {
 	id: string;
