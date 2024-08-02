@@ -6,7 +6,7 @@
     <ul class="flex justify-around text-2xl p-2 m-2">
         <li><img src={logo} alt="logo"></li>
         <li><a href="/home">For You</a></li>
-        <li><a href="/home/+page">Following</a></li>
+        <li><a href="/my-posts">Your posts</a></li>
         <li><a href="/post">Create new post</a></li>
         <li>
 
