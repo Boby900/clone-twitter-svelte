@@ -1,3 +1,10 @@
+CREATE TABLE IF NOT EXISTS "my-posts" (
+	"id" text PRIMARY KEY DEFAULT '' NOT NULL,
+	"content" text NOT NULL,
+	"likes" integer DEFAULT 0,
+	"imageUrl" text
+);
+--> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "session" (
 	"id" text PRIMARY KEY NOT NULL,
 	"user_id" text NOT NULL,
@@ -5,7 +12,9 @@ CREATE TABLE IF NOT EXISTS "session" (
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "user" (
-	"id" text PRIMARY KEY NOT NULL
+	"id" text PRIMARY KEY NOT NULL,
+	"username" text,
+	"password_hash" text
 );
 --> statement-breakpoint
 DO $$ BEGIN

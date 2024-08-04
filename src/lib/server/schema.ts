@@ -1,4 +1,4 @@
-import { pgTable, text, timestamp, integer } from "drizzle-orm/pg-core";
+import { pgTable, text, timestamp, integer} from "drizzle-orm/pg-core";
 
 export const userTable = pgTable("user", {
 	id: text("id").primaryKey(),
@@ -17,9 +17,10 @@ export const sessionTable = pgTable("session", {
 	}).notNull()
 });
 
-export const postTable = pgTable("post", {
+
+export const mypostsTable = pgTable("my-posts", {
 	
-	
+	id: text("id").primaryKey().default(""),
 	content: text("content").notNull(),
 	likes: integer("likes").default(0),
 	imageUrl: text("imageUrl")

@@ -5,36 +5,8 @@
     {
       "idx": 0,
       "version": "7",
-      "when": 1722150435751,
-      "tag": "0000_empty_morgan_stark",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "7",
-      "when": 1722259673476,
-      "tag": "0001_sticky_nick_fury",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "7",
-      "when": 1722435092710,
-      "tag": "0002_special_lake",
-      "breakpoints": true
-    },
-    {
-      "idx": 3,
-      "version": "7",
-      "when": 1722435586068,
-      "tag": "0003_slippery_piledriver",
-      "breakpoints": true
-    },
-    {
-      "idx": 4,
-      "version": "7",
-      "when": 1722605720860,
-      "tag": "0004_plain_anthem",
+      "when": 1722775804830,
+      "tag": "0000_uneven_wonder_man",
       "breakpoints": true
     }
   ]
