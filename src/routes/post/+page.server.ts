@@ -1,16 +1,17 @@
 import type { Actions } from './$types';
-import { postTable } from '$lib/server/schema';
+import { mypostsTable } from '$lib/server/schema';
 import { db } from '$lib/server/db';
+import { generateId } from "lucia";
 export const actions: Actions = {
 	default: async (event) => {
 		const formData = await event.request.formData();
 		const content = formData.get('content');
-		console.log(content);
+		const id = generateId(15);
 
 
         if (typeof content === "string" && content.trim() !== "") {
             try {
-              await db.insert(postTable).values({ content: content });
+              await db.insert(mypostsTable).values({ content: content, id: id });
       
               return { success: true };
             } catch (error) {
