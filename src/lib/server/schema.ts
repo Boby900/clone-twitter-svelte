@@ -20,7 +20,7 @@ export const sessionTable = pgTable("session", {
 
 export const mypostsTable = pgTable("my-posts", {
 	
-	id: text("id").primaryKey().default(""),
+	id: text("id").primaryKey(),
 	content: text("content").notNull(),
 	likes: integer("likes").default(0),
 	imageUrl: text("imageUrl")

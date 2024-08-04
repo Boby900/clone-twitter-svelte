@@ -11,4 +11,3 @@ export const load = async() =>{
     return {post}
 }
 
-load()

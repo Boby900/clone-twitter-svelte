@@ -1,0 +1,1 @@
+ALTER TABLE "my-posts" ALTER COLUMN "id" DROP DEFAULT;
