@@ -18,7 +18,7 @@
 			</Card.Content>
 			<Card.Content>
 				<div class="flex justify-around">
-					<div class="bg-slate-600 cursor-pointer">👍 <span class="bg-none">2</span></div>	
+					<div class="bg-slate-600 cursor-pointer" on:click={}>👍 <span class="bg-none">2</span></div>	
 							
 					<div class="bg-slate-600 cursor-pointer">🚮</div>					
 				</div>
