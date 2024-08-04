@@ -7,9 +7,8 @@ import { db } from '$lib/server/db';
 export const load = async() =>{
 
     const post = await db.select().from(postTable);
-    console.log(typeof post)
-    return {...post}
-    
+    // console.log( post)
+    return {post}
 }
 
 load()
