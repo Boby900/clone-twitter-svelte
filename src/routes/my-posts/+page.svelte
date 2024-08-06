@@ -11,8 +11,13 @@
 </script>
 <div class="text-center text-2xl p-2 m-2">Welcome to my-posts page</div>
 
-<div class="grid-cols-3 grid gap-3 p-4 m-4">
+<div class="grid-cols-3 cursor-pointer grid gap-3 p-4 m-4">
+	
 	{#each data.post as post}
+	<a href="/my-posts/{post.id}">
+
+
+	
 		<Card.Root>
 			<Card.Header>
 				<Card.Title>{post.content}</Card.Title>
@@ -28,5 +33,6 @@
 				</div>
 			</Card.Content>
 		</Card.Root>
+	</a>
 	{/each}
 </div>
