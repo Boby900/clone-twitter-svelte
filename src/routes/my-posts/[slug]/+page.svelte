@@ -1,20 +1,17 @@
 <script>
 	export let data;
 	import * as Card from '$lib/components/ui/card';
-	// console.log( data.post.length);
+
     import {page} from '$app/stores';
     const {params} = $page;
-    console.log(params.slug)
+ 
 </script>
 <div class="text-center text-2xl p-2 m-2">Welcome to my-posts page</div>
 
 <div class="grid-cols-3  grid gap-3 p-4 m-4">
 	
 	{#each data.post as post}
-	
-
-
-	
+	{#if post.id == params.slug}
 		<Card.Root>
 			<Card.Header>
 				<Card.Title>{post.content}</Card.Title>
@@ -28,6 +25,7 @@
 				</div>
 			</Card.Content>
 		</Card.Root>
-
+		{/if}
 	{/each}
+
 </div>

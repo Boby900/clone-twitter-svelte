@@ -1,7 +1,7 @@
 <script>
 	export let data;
 	import * as Card from '$lib/components/ui/card';
-	// console.log( data.post.length);
+	
 </script>
 
 <div class="text-center text-2xl p-2 m-2">Welcome to my-posts page</div>
