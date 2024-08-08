@@ -17,7 +17,12 @@
 			<button class="pt-4">Continue</button>
 			<p>{form?.message ?? ""}</p>
 		</form>
-		<a href="/signup">Create an account</a>
+		<div>
+			<a href="/login/github">Sign in with GitHub</a>
+		</div>
+		<div>
+			<a href="/signup">Create an account</a>
+		</div>
 	</div>
 	
 </div>
