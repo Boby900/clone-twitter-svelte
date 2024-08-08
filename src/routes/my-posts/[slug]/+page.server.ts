@@ -14,9 +14,11 @@ export const load = async() =>{
 
 
 
-export const actions = {
-	default: async () => {
-        await db.delete(mypostsTable).where(eq(mypostsTable.id,))
+export const actions: Actions = {
+	default: async ({params}) => {
+      
+        console.log(params.slug)
+        await db.delete(mypostsTable).where(eq(mypostsTable.id,params.slug))
         console.log("button clicked")
 	},
-} satisfies Actions;
+} 
