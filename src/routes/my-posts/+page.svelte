@@ -18,7 +18,7 @@
 			<Card.Content>
 				<div class="flex justify-around">
 					<a href="/my-posts/{post.id}">
-						<p>Edit📝</p>
+						<p>Edit ✏️</p>
 					</a>
 				</div>
 			</Card.Content>
