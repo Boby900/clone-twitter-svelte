@@ -1,5 +1,5 @@
 <script>
-	
+	import { Trash2 } from 'lucide-svelte';
 	export let data;
 	import * as Card from '$lib/components/ui/card';
 	import { enhance } from '$app/forms';
@@ -22,7 +22,11 @@
 				<Card.Content>
 					<div class="flex cursor-pointer justify-around">
 						<form method="POST" use:enhance>
-							<button type="submit">Delete 🚮 </button>
+							<button type="submit"
+								><Trash2
+									color="#2f76a2"
+								/>
+							</button>
 						</form>
 					</div>
 				</Card.Content>

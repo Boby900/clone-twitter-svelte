@@ -1,7 +1,9 @@
 <script>
 	export let data;
 	import * as Card from '$lib/components/ui/card';
-	
+	import { Heart } from 'lucide-svelte';
+import { Pencil } from 'lucide-svelte';
+
 </script>
 
 <div class="text-center text-2xl p-2 m-2">Welcome to my-posts page</div>
@@ -17,9 +19,18 @@
 			</Card.Content>
 			<Card.Content>
 				<div class="flex justify-around">
-					<a href="/my-posts/{post.id}">
-						<p>Edit ✏️</p>
-					</a>
+					<div>
+						<a href="/my-posts/{post.id}">
+							<Pencil strokeWidth="3"   color="#afba17" />
+						</a>
+					</div>
+					<div>
+						<a href="/">
+							<Heart strokeWidth="3"  color="#ba171f" />
+						</a>
+					</div>
+					
+					
 				</div>
 			</Card.Content>
 		</Card.Root>
