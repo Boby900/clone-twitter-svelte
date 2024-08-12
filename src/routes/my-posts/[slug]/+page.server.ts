@@ -10,6 +10,8 @@ export const load = async () => {
 	return { post };
 };
 
+
+
 export const actions: Actions = {
 	default: async ({ params }) => {
 		await db.delete(mypostsTable).where(eq(mypostsTable.id, params.slug));

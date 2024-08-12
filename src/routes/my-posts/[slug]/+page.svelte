@@ -7,15 +7,16 @@
 	import { page } from '$app/stores';
 	const { params } = $page;
 
+	async function fetchData() {
+		const response = await fetch('/api/posts', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		});
 
-	let number;
-	
-	async function add() {
-		const response = await fetch('/api/posts');
-		number = await response.json();
-		console.log("this is the number of likes", number);
+		const data = await response.json();
 	}
-
 </script>
 
 <div class="text-center text-2xl p-2 m-2">Welcome to my-posts page</div>
@@ -39,18 +40,18 @@
 						</div>
 						<div class="flex justify-between gap-2">
 							<div>
-								<button on:click={add} >
+								<button on:click={fetchData}>
 									<Heart strokeWidth="3" color="#ba171f" />
 								</button>
 							</div>
-						
-								{#if post.likes !== 0}
+
+							{#if post.likes !== 0}
 								<div>
 									<p>
 										{post.likes}
 									</p>
 								</div>
-							 {/if}
+							{/if}
 						</div>
 					</div>
 				</Card.Content>
