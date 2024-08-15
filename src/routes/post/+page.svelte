@@ -1,5 +1,5 @@
 <script>
-    import {Button} from "$lib/components/ui/button/index"
+	import { Button } from '$lib/components/ui/button/index';
 </script>
 
 <p class="text-center text-2xl p-2 m-2">What is happening?</p>

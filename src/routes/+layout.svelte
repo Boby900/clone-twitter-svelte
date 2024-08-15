@@ -1,11 +1,7 @@
 <script>
-	
+	import '../app.css';
+	import { ModeWatcher } from 'mode-watcher';
+</script>
 
-    import "../app.css";
-    import { ModeWatcher } from "mode-watcher";
-   
-  </script>
-  
-
-    <ModeWatcher />
-  <slot />
+<ModeWatcher />
+<slot />

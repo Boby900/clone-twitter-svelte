@@ -6,7 +6,7 @@
 	import { enhance } from '$app/forms';
 	import { page } from '$app/stores';
 	const { params } = $page;
-	const id= params
+	const id = params;
 	async function fetchData() {
 		const response = await fetch(`/api/posts/${id.slug}`, {
 			method: 'POST',
@@ -18,6 +18,7 @@
 		console.log(data);
 	}
 </script>
+
 <div class="text-center text-2xl p-2 m-2">Welcome to my-posts page</div>
 <div class="grid-cols-3 grid gap-3 p-4 m-4">
 	{#each data.post as post}
