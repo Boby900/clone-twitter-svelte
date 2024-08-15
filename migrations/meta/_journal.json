@@ -1,27 +1,27 @@
 {
-  "version": "7",
-  "dialect": "postgresql",
-  "entries": [
-    {
-      "idx": 0,
-      "version": "7",
-      "when": 1722775804830,
-      "tag": "0000_uneven_wonder_man",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "7",
-      "when": 1722779335010,
-      "tag": "0001_thankful_unicorn",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "7",
-      "when": 1723113564765,
-      "tag": "0002_natural_viper",
-      "breakpoints": true
-    }
-  ]
+	"version": "7",
+	"dialect": "postgresql",
+	"entries": [
+		{
+			"idx": 0,
+			"version": "7",
+			"when": 1722775804830,
+			"tag": "0000_uneven_wonder_man",
+			"breakpoints": true
+		},
+		{
+			"idx": 1,
+			"version": "7",
+			"when": 1722779335010,
+			"tag": "0001_thankful_unicorn",
+			"breakpoints": true
+		},
+		{
+			"idx": 2,
+			"version": "7",
+			"when": 1723113564765,
+			"tag": "0002_natural_viper",
+			"breakpoints": true
+		}
+	]
 }

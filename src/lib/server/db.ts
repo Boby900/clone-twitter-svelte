@@ -1,14 +1,7 @@
 import { sql } from '@vercel/postgres';
 import { drizzle } from 'drizzle-orm/vercel-postgres';
 import { config } from 'dotenv';
-import * as schema from './schema'
+import * as schema from './schema';
 config({ path: '.env.local' });
 
-export const db = drizzle(sql,{schema});
-
-
-
-
-
-
-
+export const db = drizzle(sql, { schema });

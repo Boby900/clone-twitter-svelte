@@ -35,11 +35,9 @@ export const actions: Actions = {
 				message: 'Invalid password'
 			});
 		}
-		const existingUser = await db.query.userTable.findFirst({
+		const existingUser = (await db.query.userTable.findFirst({
 			where: eq(userTable.username, username.toLowerCase())
-		}) as
-		| DatabaseUser
-		| undefined;
+		})) as DatabaseUser | undefined;
 
 		if (!existingUser) {
 			return fail(400, {
@@ -54,7 +52,6 @@ export const actions: Actions = {
 			parallelism: 1
 		});
 		if (!validPassword) {
-			
 			return fail(400, {
 				message: 'Incorrect username or password'
 			});
