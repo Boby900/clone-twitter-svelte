@@ -1,7 +1,8 @@
 <script>
-	import '../app.css';
+	import '../app.pcss';
 	import { ModeWatcher } from 'mode-watcher';
 	import { Input } from "$lib/components/ui/input";	import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
+  import { enhance } from '$app/forms';
 
 
 // import { Menu } from "lucide-react";
@@ -23,12 +24,12 @@
                       aria-label="feedback"
                       class="hover:underline underline-offset-8 ... decoration-sky-500 focus:underline "
                     >
-                      Home
+                     Home
                     </a>
                   </DropdownMenu.Item>
                   <DropdownMenu.Item>
                     <a
-                      href="/dashboard"
+                      href="/"
                       class="hover:underline underline-offset-8 ... decoration-sky-500 focus:underline "
                     >
                       Dashboard
@@ -65,7 +66,7 @@
 
         <div class="hidden md:block">
           <a
-            href="/dashboard"
+            href="/"
             class="hover:underline underline-offset-8 ... decoration-sky-500 focus:underline "
           >
             Dashboard
@@ -74,20 +75,30 @@
 
         <div class="hidden md:block">
           <a
-            href="/pricing"
+            href="/my-posts"
             class="hover:underline underline-offset-8 ... decoration-sky-500 focus:underline  ... "
           >
-            Pricing
+            Your Posts
           </a>
         </div>
         <div class="hidden md:block">
           <a
-            href="/upload"
+            href="/post"
             aria-label="feedback"
             class="hover:underline ... decoration-sky-500 focus:underline underline-offset-8 ... "
           >
-            Feedback
+            Create Post
           </a>
+        </div>
+        <div class="hidden md:block">
+         
+          <a
+          href="/"
+          aria-label="feedback"
+          class=" hover:underline ... decoration-sky-500 focus:underline underline-offset-8 ... "
+        >
+          Sign Out
+        </a>
         </div>
       </header>
     </div>
