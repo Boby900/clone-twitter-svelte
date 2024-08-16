@@ -6,7 +6,7 @@
 	export let form: ActionData;
 </script>
 
-<h1 class="text-center text-2xl">Create an account</h1>
+<h1 class="text-center pt-8 mt-10 font-bold text-2xl text-gray-500">Create an account</h1>
 
 <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
 	<form class="space-y-6" method="post" use:enhance>
