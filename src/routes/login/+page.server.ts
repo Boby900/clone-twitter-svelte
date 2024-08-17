@@ -64,6 +64,6 @@ export const actions: Actions = {
 			...sessionCookie.attributes
 		});
 
-		return redirect(302, '/home');
+		return redirect(302, '/');
 	}
 };
