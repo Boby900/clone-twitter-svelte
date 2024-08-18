@@ -15,7 +15,7 @@
 			}
 		});
 		const data = await response.json();
-		console.log(data);
+	
 	}
 </script>
 <div class="grid-cols-3 grid gap-3 p-4 m-4">

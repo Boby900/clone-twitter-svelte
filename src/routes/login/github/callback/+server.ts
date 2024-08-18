@@ -24,7 +24,7 @@ export async function GET(event: RequestEvent): Promise<Response> {
 			}
 		});
 		const githubUser: GitHubUser = await githubUserResponse.json();
-		console.log(githubUser.avatar_url);
+	
 		// Replace this with your own DB client.
 		// const existingUser = await db.table("user").where("github_id", "=", githubUser.id).get();
 
