@@ -49,7 +49,7 @@ export const actions: Actions = {
 			await db.insert(userTable).values({
 				id: userId,
 				username: username,
-				password_hash: passwordHash
+				password_hash: passwordHash,
 			});
 			const session = await lucia.createSession(userId, {});
 			const sessionCookie = lucia.createSessionCookie(session.id);

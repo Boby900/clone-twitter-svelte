@@ -3,10 +3,12 @@
 	import type { PageData } from './$types';
 
 	export let data: PageData;
+	console.log(data);
 </script>
 
 <h1>Hi, {data.user.username}!</h1>
 <p>Your user ID is {data.user.id}.</p>
+<!-- <img src={data.user} alt="Your avatar" /> -->
 <form method="post" use:enhance>
 	<button>Sign out</button>
 </form>

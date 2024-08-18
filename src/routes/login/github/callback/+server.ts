@@ -24,7 +24,7 @@ export async function GET(event: RequestEvent): Promise<Response> {
 			}
 		});
 		const githubUser: GitHubUser = await githubUserResponse.json();
-
+		console.log(githubUser.avatar_url);
 		// Replace this with your own DB client.
 		// const existingUser = await db.table("user").where("github_id", "=", githubUser.id).get();
 
@@ -52,7 +52,8 @@ export async function GET(event: RequestEvent): Promise<Response> {
 			await db.insert(userTable).values({
 				id: userId,
 				github_id: githubUser.id,
-				username: githubUser.login
+				username: githubUser.login,
+				github_avatar_url: githubUser.avatar_url
 			});
 
 			const session = await lucia.createSession(userId, {});
@@ -85,4 +86,5 @@ export async function GET(event: RequestEvent): Promise<Response> {
 interface GitHubUser {
 	id: number;
 	login: string;
+	avatar_url: string;
 }
