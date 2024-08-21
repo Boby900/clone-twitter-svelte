@@ -7,28 +7,28 @@
 
 
 	{#if data.post.length > 0}
+	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6 m-4  rounded-lg shadow-lg">
 		{#each data.post as post}
-		<div class="grid-cols-3 grid gap-3 p-4 m-4">
-			<Card.Root>
-				<Card.Header>
-					<Card.Title>{post.content}</Card.Title>
-				</Card.Header>
-				<Card.Content>
-					{post.imageUrl}
-				</Card.Content>
-				<Card.Content>
-					<div class="flex justify-around">
-						<div>
-							<a href="/my-posts/{post.id}">
-								<Pencil strokeWidth="3" color="#afba17" />
-							</a>
-						</div>
-					</div>
-				</Card.Content>
-			</Card.Root>
-		</div>
+		  <Card.Root class=" rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+			<Card.Header class="p-4  text-white">
+			  <Card.Title class="text-lg font-semibold text-gray-100">{post.content}</Card.Title>
+			</Card.Header>
+			<Card.Content class="p-4 text-gray-300">
+			  <div class="w-full h-48 flex items-center justify-center rounded-lg">
+				<span>No Image Available</span>
+			  </div>
+			</Card.Content>
+			<Card.Content class="p-4">
+			  <div class="flex justify-between items-center">
+				<a href="/my-posts/{post.id}" class="text-yellow-500 hover:text-yellow-400">
+				  <Pencil strokeWidth="3" color="#afba17" />
+				</a>
+			  </div>
+			</Card.Content>
+		  </Card.Root>
 		{/each}
-	
+	  </div>
+	  
 	{:else}
 		<div
 			class="flex  flex-col items-center justify-center text-center p-4 m-4 border rounded-lg border-gray-300 border-dashed"
