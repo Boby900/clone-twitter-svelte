@@ -1,5 +1,5 @@
 <script lang='ts'>
-	import '../app.pcss';
+	import '../app.css';
 	import { ModeWatcher } from 'mode-watcher';
 	import { Input } from "$lib/components/ui/input";	import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
   import { enhance } from '$app/forms';
@@ -34,7 +34,7 @@
                       href="/"
                       class="hover:underline underline-offset-8 ... decoration-sky-500 focus:underline "
                     >
-                      Dashboard
+                      Profile
                     </a>
                   </DropdownMenu.Item>
                   <DropdownMenu.Item>
@@ -68,10 +68,10 @@
 
         <div class="hidden md:block">
           <a
-            href="/"
+            href="/profile"
             class="hover:underline underline-offset-8 ... decoration-sky-500 focus:underline "
           >
-            Dashboard
+            Profile
           </a>
         </div>
 
