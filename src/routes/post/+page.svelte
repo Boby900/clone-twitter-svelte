@@ -11,10 +11,12 @@
 				<textarea
 					name="content"
 					placeholder="What's on your mind?"
+					required
 					class="w-full p-4 text-gray-300 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none shadow-inner"
 					rows="8"
 					cols="66"
 				></textarea>
+				<input type="file" name="" id="">
 			</div>
 
 			<div class="text-center">
