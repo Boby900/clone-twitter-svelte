@@ -8,7 +8,7 @@ import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 export const load: PageServerLoad = async (event) => {
 	if (!event.locals.user) {
-		return redirect(302, '/');
+		return redirect(302, '/'); 
 	} else {
 		const post = await db.select().from(mypostsTable);
 		return { user: event.locals.user, post };
