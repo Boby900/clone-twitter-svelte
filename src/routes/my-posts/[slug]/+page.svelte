@@ -19,21 +19,25 @@
 	}
 </script>
 
-<div class="grid-cols-3 grid gap-3 p-4 m-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 m-4">
 	{#each data.post as post}
 		{#if post.id == params.slug}
-			<Card.Root>
-				<Card.Header>
-					<Card.Title>{post.content}</Card.Title>
+			<Card.Root class="shadow-md rounded-lg overflow-hidden">
+				<Card.Header class="p-4 border-b">
+					<Card.Title class="text-xl font-semibold">{post.content}</Card.Title>
 				</Card.Header>
-				<Card.Content>
-					{post.imageUrl}
+				<Card.Content class="p-4">
+					<img src="{post.imageUrl}" alt="{post.content}" class="w-full h-auto" />
 				</Card.Content>
-				<Card.Content>
-					<div class="flex m-4 gap-7 p-4 justify-between">
+				<Card.Content class="p-4 border-t">
+					<div class="flex flex-col md:flex-row justify-between items-center gap-4">
 						<div>
 							<AlertDialog.Root>
-								<AlertDialog.Trigger><Trash2 color="#2f76a2" /></AlertDialog.Trigger>
+								<AlertDialog.Trigger>
+									<button class="p-2 text-blue-500 hover:text-blue-700">
+										<Trash2 color="#2f76a2" />
+									</button>
+								</AlertDialog.Trigger>
 								<AlertDialog.Content>
 									<AlertDialog.Header>
 										<AlertDialog.Title>Are you absolutely sure?</AlertDialog.Title>
@@ -43,27 +47,25 @@
 										</AlertDialog.Description>
 									</AlertDialog.Header>
 									<AlertDialog.Footer>
-										<AlertDialog.Cancel>Cancel</AlertDialog.Cancel>
-										<AlertDialog.Action
-											><form method="POST" use:enhance>
-												<button type="submit"> Continue</button>
-											</form></AlertDialog.Action
-										>
+										<AlertDialog.Cancel class="px-4 py-2 text-gray-600 hover:text-gray-800">Cancel</AlertDialog.Cancel>
+										<AlertDialog.Action>
+											<form method="POST" use:enhance>
+												<button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+													Continue
+												</button>
+											</form>
+										</AlertDialog.Action>
 									</AlertDialog.Footer>
 								</AlertDialog.Content>
 							</AlertDialog.Root>
 						</div>
-						<div class="flex justify-between gap-2">
-							<div>
-								<button on:click={fetchData}>
-									<Heart strokeWidth="3" color="#ba171f" />
-								</button>
-							</div>
+						<div class="flex items-center gap-2">
+							<button on:click={fetchData} class="p-2 text-red-500 hover:text-red-700">
+								<Heart strokeWidth="3" color="#ba171f" />
+							</button>
 							{#if post.likes !== 0}
-								<div>
-									<p>
-										{post.likes}
-									</p>
+								<div class="text-lg font-medium">
+									<p>{post.likes}</p>
 								</div>
 							{/if}
 						</div>
