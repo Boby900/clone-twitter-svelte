@@ -6,7 +6,7 @@ import '@testing-library/jest-dom/vitest'
 describe('Button Component', () => {
   it('renders correctly with default label', () => {
     const { getByText } = render(Button);
-    expect(getByText('Dashboard')).toBeInTheDocument(); // Use 'toBeInTheDocument' to assert the presence of the text
+    expect(getByText('Profile')).toBeInTheDocument(); // Use 'toBeInTheDocument' to assert the presence of the text
   });
 
   // it('renders correctly with a custom label', () => {
